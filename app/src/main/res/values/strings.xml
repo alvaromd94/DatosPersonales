@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Datos Personales</string>
+    <string name="TextViewNombre">Nombre:</string>
+    <string name="editTextNombre">Escriba aquí su nombre</string>
+    <string name="TextViewApellidos">Apellidos:</string>
+    <string name="editTextApellidos">Escriba aquí sus apellidos</string>
+    <string name="TextViewEdad">Edad:</string>
+    <string name="editTextEdad">Escriba aquí su edad</string>
+    <string name="textViewGenero">Género:</string>
+    <string name="radioButtonHombre">Hombre</string>
+    <string name="radioButtonMujer">Mujer</string>
+    <string name="textViewEstadoCivil">Estado Civil:</string>
+    <string-array name="estadoCivil">
+        <item>Casado</item>
+        <item>Separado</item>
+        <item>Viudo/a</item>
+        <item>Otro</item>
+    </string-array>
+    <string name="textViewHijos">¿Tiene Hijos?</string>
+    <string name="switchHijos">SI/NO</string>
+    <string name="btnMostrar">Mostrar</string>
+    <string name="btnLimpiar">Limpiar</string>
+
+</resources>
