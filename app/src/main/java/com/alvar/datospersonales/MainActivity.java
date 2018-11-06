@@ -3,6 +3,7 @@ package com.alvar.datospersonales;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     String[]estadoCivil ;
+    int edad=0;
+    String genero="";
+    String tieneHijos="";
+    String mayoriaEdad="";
+    String cadenaNombre="";
+    String cadenaApellidos="";
+    String cadenaEdad="";
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
         btnlimpiar =  findViewById(R.id.btnLimpiar);
         textViewResultado =  findViewById(R.id.textViewResultado);
 
+        radioButtonHombre.setChecked(true);
+
        ArrayAdapter adaptador = ArrayAdapter.createFromResource(this, R.array.estadoCivil,R.layout.support_simple_spinner_dropdown_item);
-        Spinner spinnerEstadoCivil = findViewById(R.id.spinnerEstadoCivil);
+        final Spinner spinnerEstadoCivil = findViewById(R.id.spinnerEstadoCivil);
         spinnerEstadoCivil.setAdapter(adaptador);
 
         btnlimpiar.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 editTextEdad.setText("");
                 radioButtonMujer.setChecked(false);
 
-                switchHijos.setEnabled(false);
+                switchHijos.setChecked(false);
+                textViewResultado.setText("");
             }
         });
 
@@ -71,13 +82,38 @@ public class MainActivity extends AppCompatActivity {
                 if(!editTextNombre.getText().toString().isEmpty()&&!editTextApellidos.getText().toString().isEmpty()&&!editTextEdad.getText().toString().isEmpty())
                 {
                     textViewResultado.setTextColor(getResources().getColor(R.color.Negro));
+                    Log.i("App", "Posición" + spinnerEstadoCivil.getSelectedItemPosition() + "Estado Civil"+ spinnerEstadoCivil.getSelectedItem().toString());
+                    edad = Integer.parseInt(editTextEdad.getText().toString());
+                    mayoriaEdad = (edad>=18)? "mayor de edad" : "menor de edad";
+                    genero = (radioButtonHombre.isChecked())?"hombre" :"mujer";
+                    tieneHijos = (switchHijos.isChecked()?"con hijos" : "sin hijos");
 
-                    textViewResultado.setText( "Nombre"+ editTextNombre.getText() + editTextApellidos.getText() + editTextEdad.getText());
+
+                    textViewResultado.setText( editTextApellidos.getText() + ", " + editTextNombre.getText() + ", " + mayoriaEdad + ", " + genero + ", " + spinnerEstadoCivil.getSelectedItem() + " y " + tieneHijos + ".");
                 }
 
+                else{
+                    textViewResultado.setTextColor(getResources().getColor(R.color.Rojo));
 
-                textViewResultado.setText( "Nombre"+ editTextNombre.getText() + editTextApellidos.getText() + editTextEdad.getText());
-            }
+                    if(editTextNombre.getText().toString().isEmpty())
+                    {
+                        cadenaNombre=getResources().getString(R.string.errorNombre);
+                    }
+                    if(editTextApellidos.getText().toString().isEmpty())
+                    {
+                        cadenaApellidos=getResources().getString(R.string.errorApellidos);
+
+                    }
+                    if(editTextEdad.getText().toString().isEmpty())
+                    {
+                        cadenaEdad=getResources().getString(R.string.errorEdad);
+                    }
+
+                    textViewResultado.setText(cadenaNombre + " " + cadenaApellidos + " " + cadenaEdad);
+
+                }
+                }
+
         });
     }
 }

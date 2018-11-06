@@ -21,8 +21,11 @@
         <item>@string/Otro</item>
     </string-array>
     <string name="textViewHijos">¿Tiene Hijos?</string>
-    <string name="switchHijos">SI/NO</string>
+    <string name="switchHijos">NO/SÍ</string>
     <string name="btnMostrar">Mostrar</string>
     <string name="btnLimpiar">Limpiar</string>
 
+    <string name="errorNombre">Falta añadir el nombre.</string>
+    <string name="errorApellidos">Falta añadir el apellido.</string>
+    <string name="errorEdad">Falta añadir la edad.</string>
 </resources>

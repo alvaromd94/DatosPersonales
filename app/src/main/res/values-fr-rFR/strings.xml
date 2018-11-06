@@ -12,11 +12,14 @@
     <string name="radioButtonMujer">Femme:</string>
     <string name="textViewEstadoCivil">État Civil</string>
     <string name="textViewHijos">" Il a des enfants?"</string>
-    <string name="switchHijos">OUI/NON</string>
+    <string name="switchHijos">NON/OUI</string>
     <string name="btnMostrar">Montrer</string>
     <string name="btnLimpiar">"Nettoyer "</string>
     <string name="Casado">" Marié"</string>
     <string name="Separado">Divorcé</string>
     <string name="Viudo">Veuf</string>
     <string name="Otro">Autre</string>
+    <string name="errorEdad">Âge manquant.</string>
+    <string name="errorNombre">Nom manquant.</string>
+    <string name="errorApellidos">Prènom manquant.</string>
 </resources>
