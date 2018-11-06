@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Datos Personales</string>
+    <string name="app_name" translatable="false">Datos Personales</string>
     <string name="TextViewNombre">Nombre:</string>
     <string name="editTextNombre">Escriba aquí su nombre</string>
     <string name="TextViewApellidos">Apellidos:</string>
@@ -10,11 +10,15 @@
     <string name="radioButtonHombre">Hombre</string>
     <string name="radioButtonMujer">Mujer</string>
     <string name="textViewEstadoCivil">Estado Civil:</string>
+    <string name="Casado">Casado</string>
+    <string name="Separado">Separado</string>
+    <string name="Viudo">Viudo</string>
+    <string name="Otro">Otro</string>
     <string-array name="estadoCivil">
-        <item>Casado</item>
-        <item>Separado</item>
-        <item>Viudo/a</item>
-        <item>Otro</item>
+        <item>@string/Casado</item>
+        <item>@string/Separado</item>
+        <item>@string/Viudo</item>
+        <item>@string/Otro</item>
     </string-array>
     <string name="textViewHijos">¿Tiene Hijos?</string>
     <string name="switchHijos">SI/NO</string>

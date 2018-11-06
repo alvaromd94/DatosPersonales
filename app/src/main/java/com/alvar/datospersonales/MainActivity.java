@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
     Switch switchHijos;
     Button btnMostrar;
     Button btnlimpiar;
+    TextView textViewResultado;
 
-//Resources res= getResources();
-//String[]estadoCivil = res.getStringArray(R.array.estadoCivil);
+
+    String[]estadoCivil ;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +36,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextNombre = (EditText) findViewById(R.id.editTextNombre);
-        editTextApellidos = (EditText) findViewById(R.id.editTextApellidos);
-        editTextEdad = (EditText) findViewById(R.id.editTextEdad);
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        radioButtonHombre = (RadioButton) findViewById(R.id.radioButtonHombre);
-        radioButtonMujer =(RadioButton) findViewById(R.id.radioButtonMujer);
+        editTextNombre =  findViewById(R.id.editTextNombre);
+        editTextApellidos =  findViewById(R.id.editTextApellidos);
+        editTextEdad =  findViewById(R.id.editTextEdad);
+        radioGroup =  findViewById(R.id.radioGroup);
+        radioButtonHombre =  findViewById(R.id.radioButtonHombre);
+        radioButtonMujer = findViewById(R.id.radioButtonMujer);
 
-        switchHijos = (Switch) findViewById(R.id.switchHijos);
-        btnMostrar = (Button) findViewById(R.id.btnMostrar);
-        btnlimpiar = (Button) findViewById(R.id.btnLimpiar);
+        switchHijos =  findViewById(R.id.switchHijos);
+        btnMostrar =  findViewById(R.id.btnMostrar);
+        btnlimpiar =  findViewById(R.id.btnLimpiar);
+        textViewResultado =  findViewById(R.id.textViewResultado);
 
-        //ArrayAdapter<String> estadoCivil = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, R.string.estadoCivil);
-
+       ArrayAdapter adaptador = ArrayAdapter.createFromResource(this, R.array.estadoCivil,R.layout.support_simple_spinner_dropdown_item);
+        Spinner spinnerEstadoCivil = findViewById(R.id.spinnerEstadoCivil);
+        spinnerEstadoCivil.setAdapter(adaptador);
 
         btnlimpiar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +64,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnMostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                textViewResultado.setText( "Nombre"+ editTextNombre.getText() + editTextApellidos.getText() + editTextEdad.getText());
+            }
+        });
     }
 }

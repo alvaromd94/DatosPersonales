@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datos Personales</string>
+    <string name="TextViewNombre">Nom:</string>
+    <string name="TextViewApellidos">Prènom:</string>
+    <string name="editTextNombre">Écris ton nom ici</string>
+    <string name="editTextApellidos">Écris ton prènom ici</string>
+    <string name="TextViewEdad">" Âge"</string>
+    <string name="editTextEdad">Écris ton âge ici</string>
+    <string name="textViewGenero">Genre:</string>
+    <string name="radioButtonHombre">Mâle:</string>
+    <string name="radioButtonMujer">Femme:</string>
+    <string name="textViewEstadoCivil">État Civil</string>
+    <string name="textViewHijos">" Il a des enfants?"</string>
+    <string name="switchHijos">OUI/NON</string>
+    <string name="btnMostrar">Montrer</string>
+    <string name="btnLimpiar">"Nettoyer "</string>
+    <string name="Casado">" Marié"</string>
+    <string name="Separado">Divorcé</string>
+    <string name="Viudo">Veuf</string>
+    <string name="Otro">Autre</string>
+</resources>
