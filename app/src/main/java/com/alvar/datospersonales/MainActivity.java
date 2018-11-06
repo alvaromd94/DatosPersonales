@@ -68,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(!editTextNombre.getText().toString().isEmpty()&&!editTextApellidos.getText().toString().isEmpty()&&!editTextEdad.getText().toString().isEmpty())
+                {
+                    textViewResultado.setTextColor(getResources().getColor(R.color.Negro));
+
+                    textViewResultado.setText( "Nombre"+ editTextNombre.getText() + editTextApellidos.getText() + editTextEdad.getText());
+                }
 
 
                 textViewResultado.setText( "Nombre"+ editTextNombre.getText() + editTextApellidos.getText() + editTextEdad.getText());
