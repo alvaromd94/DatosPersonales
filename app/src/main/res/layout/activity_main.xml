@@ -129,7 +129,6 @@
             android:id="@+id/textViewEstadoCivil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/textViewEstadoCivil"
             android:textSize="18sp" />
 
@@ -188,5 +187,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textStyle="bold" />
 </LinearLayout>

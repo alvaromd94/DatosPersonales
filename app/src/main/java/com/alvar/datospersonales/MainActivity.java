@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnlimpiar;
     TextView textViewResultado;
 
-
     String[]estadoCivil ;
     int edad=0;
     String genero="";
@@ -50,12 +49,10 @@ public class MainActivity extends AppCompatActivity {
         radioGroup =  findViewById(R.id.radioGroup);
         radioButtonHombre =  findViewById(R.id.radioButtonHombre);
         radioButtonMujer = findViewById(R.id.radioButtonMujer);
-
         switchHijos =  findViewById(R.id.switchHijos);
         btnMostrar =  findViewById(R.id.btnMostrar);
         btnlimpiar =  findViewById(R.id.btnLimpiar);
         textViewResultado =  findViewById(R.id.textViewResultado);
-
         radioButtonHombre.setChecked(true);
 
        ArrayAdapter adaptador = ArrayAdapter.createFromResource(this, R.array.estadoCivil,R.layout.support_simple_spinner_dropdown_item);
@@ -69,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 editTextApellidos.setText("");
                 editTextEdad.setText("");
                 radioButtonMujer.setChecked(false);
-
                 switchHijos.setChecked(false);
                 textViewResultado.setText("");
             }
@@ -88,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                     genero = (radioButtonHombre.isChecked())?"hombre" :"mujer";
                     tieneHijos = (switchHijos.isChecked()?"con hijos" : "sin hijos");
 
-
                     textViewResultado.setText( editTextApellidos.getText() + ", " + editTextNombre.getText() + ", " + mayoriaEdad + ", " + genero + ", " + spinnerEstadoCivil.getSelectedItem() + " y " + tieneHijos + ".");
                 }
 
@@ -102,13 +97,11 @@ public class MainActivity extends AppCompatActivity {
                     if(editTextApellidos.getText().toString().isEmpty())
                     {
                         cadenaApellidos=getResources().getString(R.string.errorApellidos);
-
                     }
                     if(editTextEdad.getText().toString().isEmpty())
                     {
                         cadenaEdad=getResources().getString(R.string.errorEdad);
                     }
-
                     textViewResultado.setText(cadenaNombre + " " + cadenaApellidos + " " + cadenaEdad);
 
                 }
