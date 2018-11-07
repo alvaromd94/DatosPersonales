@@ -16,9 +16,24 @@
                             <entry key="launcher">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="80" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\alvar\Documents\DAM\PMDM\Tema 2\Práctica 2\datosPersonales.png" />
+                                      <entry key="foregroundImage" value="C:\Users\alvar\Desktop\datosPersonales.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
