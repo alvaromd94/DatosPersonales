@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnMostrar;
     Button btnlimpiar;
     TextView textViewResultado;
-
     String[]estadoCivil ;
     int edad=0;
     String genero="";
