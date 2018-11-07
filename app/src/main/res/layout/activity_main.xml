@@ -23,11 +23,12 @@
 
         <EditText
             android:id="@+id/editTextNombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/editTextNombre"
-            android:inputType="textCapSentences|textPersonName|textCapWords" />
+            android:inputType="textCapSentences|textPersonName|textCapWords"
+            android:importantForAutofill="no" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,11 +46,12 @@
 
         <EditText
             android:id="@+id/editTextApellidos"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/editTextApellidos"
-            android:inputType="textCapSentences|textPersonName|textCapWords" />
+            android:inputType="textCapSentences|textPersonName|textCapWords"
+            android:importantForAutofill="no" />
     </LinearLayout>
 
     <LinearLayout
@@ -67,12 +69,13 @@
 
         <EditText
             android:id="@+id/editTextEdad"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/editTextEdad"
-            android:inputType="textPersonName|number" />
+            android:inputType="textPersonName|number"
+            android:importantForAutofill="no" />
     </LinearLayout>
 
     <LinearLayout
