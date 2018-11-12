@@ -22,4 +22,10 @@
     <string name="errorEdad">Âge manquant.</string>
     <string name="errorNombre">Nom manquant.</string>
     <string name="errorApellidos">Prènom manquant.</string>
+    <string name="hombre">homme</string>
+    <string name="mujer">femme</string>
+    <string name="conHijos">avec des enfants</string>
+    <string name="sinHijos">sans enfants</string>
+    <string name="mayorEdad">adulte</string>
+    <string name="menorEdad">mineur</string>
 </resources>

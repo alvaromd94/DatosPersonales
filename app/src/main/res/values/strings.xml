@@ -24,8 +24,13 @@
     <string name="switchHijos">NO/SÍ</string>
     <string name="btnMostrar">Mostrar</string>
     <string name="btnLimpiar">Limpiar</string>
-
     <string name="errorNombre">Falta añadir el nombre.</string>
     <string name="errorApellidos">Falta añadir el apellido.</string>
     <string name="errorEdad">Falta añadir la edad.</string>
+    <string name="hombre">hombre</string>
+    <string name="mujer">mujer</string>
+    <string name="conHijos">con hijos</string>
+    <string name="sinHijos">sin hijos</string>
+    <string name="mayorEdad">mayor de edad</string>
+    <string name="menorEdad">menor de edad</string>
 </resources>

@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 editTextNombre.setText("");
                 editTextApellidos.setText("");
                 editTextEdad.setText("");
+                radioButtonHombre.setChecked(true);
                 radioButtonMujer.setChecked(false);
                 switchHijos.setChecked(false);
                 textViewResultado.setText("");
@@ -79,33 +80,21 @@ public class MainActivity extends AppCompatActivity {
                     textViewResultado.setTextColor(getResources().getColor(R.color.Negro));
                     Log.i("App", "Posición" + spinnerEstadoCivil.getSelectedItemPosition() + "Estado Civil"+ spinnerEstadoCivil.getSelectedItem().toString());
                     edad = Integer.parseInt(editTextEdad.getText().toString());
-                    mayoriaEdad = (edad>=18)? "mayor de edad" : "menor de edad";
-                    genero = (radioButtonHombre.isChecked())?"hombre" :"mujer";
-                    tieneHijos = (switchHijos.isChecked()?"con hijos" : "sin hijos");
+                    mayoriaEdad = (edad>=18)? getResources().getString(R.string.mayorEdad) : getResources().getString(R.string.menorEdad);
+                    genero = (radioButtonHombre.isChecked())? getString(R.string.hombre) : getResources().getString(R.string.mujer);
+                    tieneHijos = (switchHijos.isChecked())?getString(R.string.conHijos) : getResources().getString(R.string.sinHijos);
 
                     textViewResultado.setText( editTextApellidos.getText() + ", " + editTextNombre.getText() + ", " + mayoriaEdad + ", " + genero + ", " + spinnerEstadoCivil.getSelectedItem() + " y " + tieneHijos + ".");
                 }
-
                 else{
-                    textViewResultado.setTextColor(getResources().getColor(R.color.Rojo));
 
-                    if(editTextNombre.getText().toString().isEmpty())
-                    {
-                        cadenaNombre=getResources().getString(R.string.errorNombre);
-                    }
-                    if(editTextApellidos.getText().toString().isEmpty())
-                    {
-                        cadenaApellidos=getResources().getString(R.string.errorApellidos);
-                    }
-                    if(editTextEdad.getText().toString().isEmpty())
-                    {
-                        cadenaEdad=getResources().getString(R.string.errorEdad);
-                    }
-                    textViewResultado.setText(cadenaNombre + " " + cadenaApellidos + " " + cadenaEdad);
-
+                        textViewResultado.setTextColor(getResources().getColor(R.color.Rojo));
+                        cadenaNombre = (editTextNombre.getText().toString().isEmpty()) ? getResources().getString(R.string.errorNombre) : " ";
+                        cadenaApellidos = (editTextApellidos.getText().toString().isEmpty()) ? getResources().getString(R.string.errorApellidos) : " ";
+                        cadenaEdad = (editTextEdad.getText().toString().isEmpty()) ? getResources().getString(R.string.errorEdad) : " ";
+                        textViewResultado.setText(cadenaNombre + " " + cadenaApellidos + " " + cadenaEdad);
                 }
                 }
-
         });
     }
 }
