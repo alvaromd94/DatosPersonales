@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 radioButtonMujer.setChecked(false);
                 switchHijos.setChecked(false);
                 textViewResultado.setText("");
+                spinnerEstadoCivil.setSelection(0);
             }
         });
 
